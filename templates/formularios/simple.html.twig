@@ -1,0 +1,35 @@
+{% extends 'frontend.html.twig' %}
+
+{% block title %}Formularios{% endblock %}
+
+{% block body %}
+<nav aria-label="breadcrumb">
+  <ol class="breadcrumb">
+    <li class="breadcrumb-item"><a href="{{path('home_inicio')}}">Home</a></li>
+    <li class="breadcrumb-item"><a href="{{path('formularios_inicio')}}">Formularios</a></li>
+    <li class="breadcrumb-item"><a href="{{path('formulario_simple')}}">Formularios Simple</a></li>
+    
+  </ol>
+</nav>
+
+<h1>Formulario Simple</h1>
+
+
+<form method="POST" action="{{url('formulario_simple')}}">
+  <div class="form-grop">
+    <label for="form_nombre">Nombre:</label>
+    {{form_widget(form.nombre, {"attr":{"placeholder":"Nombre"}})}}
+  </div>
+  <div class="form-grop">
+    <label for="form_correo">E-Mail:</label>
+    {{form_widget(form.correo, {"attr":{"placeholder":"E-Mail"}})}}
+  </div>
+  <div class="form-grop">
+    <label for="form_telefono">Telefono:</label>
+    {{form_widget(form.telefono, {"attr":{"placeholder":"Telefono"}})}}
+  </div>
+  <hr />
+
+  <button  type="submit"  title="Enviar" class="btn btn-primary"><i class="fas fa-check"> Enviar</i></button>
+</form>
+{% endblock %}

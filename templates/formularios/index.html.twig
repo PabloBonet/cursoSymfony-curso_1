@@ -1,9 +1,27 @@
+
 {% extends 'frontend.html.twig' %}
 
 {% block title %}Formularios{% endblock %}
 
 {% block body %}
-<h1>Formulario </h1>
+<h1>Formularios </h1>
 
 <p> (Composer requiere symfony/form)
+
+<ul>
+    <li>
+        <a href="{{path('formulario_simple')}}">Formulario simple</a>
+        
+    </li>
+     <li>
+        <a href="">Formulario entity</a>
+        
+    </li>
+     <li>
+        <a href="">Formulario type</a>
+        
+    </li>
+    
+       
+</ul>
 {% endblock %}
