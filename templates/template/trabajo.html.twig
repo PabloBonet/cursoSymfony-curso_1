@@ -1,0 +1,22 @@
+{% extends 'frontend.html.twig' %}
+{% block title %} Template Trabajo {% endblock %}
+
+{% block body %} <h1>hola {{name}} {{lastname}}</h1>
+{% set edad=36%}
+<p>Tu edad es {{edad}}</p>
+
+<p>
+{% if edad > 18 %}
+
+    es mayor de edad
+{% else %}
+es menor de edad
+{% endif %}
+</p>
+
+<p>
+Variable custom: {{varGlobal}}
+</p>
+
+ {% endblock %}
+
